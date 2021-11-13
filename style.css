@@ -30,7 +30,7 @@ body {
     "float zero equals divide";
 
   background-color: #999;
-  border: 2px solid #777;
+  border: 2px solid #333;
   border-radius: 10px;
 }
 
@@ -47,7 +47,7 @@ body {
 
   background-color: white;
   border-radius: 10px;
-  border: 2px solid #777;
+  border: 2px solid #333;
 }
 
 .memory,
@@ -193,4 +193,8 @@ body {
 
 .divide {
   grid-area: divide;
+}
+
+.disabled {
+  display: none;
 }
