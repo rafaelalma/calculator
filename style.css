@@ -5,11 +5,192 @@
 }
 
 body {
-  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #444;
 }
 
-.calculator {
-  width: 600px;
+.grid-parent {
   margin: 100px auto 0 auto;
+  padding: 20px;
+
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(7, 80px);
+  width: fit-content;
+
+  grid-template-areas:
+    "memory memory memory memory"
+    "result result result result"
+    "clear clear delete delete"
+    "one two three add"
+    "four five six subtract"
+    "seven eight nine multiply"
+    "float zero equals divide";
+
+  background-color: #999;
+  border: 2px solid #777;
+  border-radius: 10px;
+}
+
+.grid-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memory,
+.result {
+  justify-content: flex-end;
+  padding-right: 10px;
+
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #777;
+}
+
+.memory,
+.number,
+.operator,
+.float,
+.equals {
+  font-size: 1.5em;
+}
+
+.result {
+  font-size: 2em;
+}
+
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.clear {
+  background-color: rgb(100, 255, 100);
+}
+
+.clear:hover {
+  background-color: rgb(100, 200, 100);
+  color: white;
+}
+
+.delete {
+  background-color: rgb(255, 100, 100);
+}
+
+.delete:hover {
+  background-color: rgb(200, 100, 100);
+  color: white;
+}
+
+.equals,
+.operator {
+  background-color: rgb(100, 100, 255);
+  color: white;
+}
+
+.equals:hover,
+.operator:hover {
+  background-color: rgb(100, 100, 200);
+}
+
+.number,
+.float {
+  background-color: #bbb;
+}
+
+.number:hover,
+.float:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+.memory {
+  grid-area: memory;
+}
+
+.result {
+  grid-area: result;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.delete {
+  grid-area: delete;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.float {
+  grid-area: float;
+}
+
+.equals {
+  grid-area: equals;
+}
+
+.add {
+  grid-area: add;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.divide {
+  grid-area: divide;
 }
